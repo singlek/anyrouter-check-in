@@ -96,3 +96,7 @@ jobs:
       run: |
         echo "签到任务执行完成"
         echo "时间: $(Get-Date)"
+
+    # 保活：防止 GitHub 因 60 天不活跃自动禁用 scheduled workflow
+    - name: Keepalive
+      uses: gautamkrishnar/keepalive-workflow@v2
